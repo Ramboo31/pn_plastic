@@ -1,0 +1,70 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M256 320c0-141.385 114.615-256 256-256s256 114.615 256 256c0 141.385-114.615 256-256 256-141.385 0-256-114.615-256-256zM768 640h-512c-141.384 0-256 114.618-256 256v64h1024v-64c0-141.382-114.616-256-256-256z"
+				],
+				"tags": [
+					"user",
+					"profile",
+					"avatar",
+					"person",
+					"talk",
+					"member"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 116,
+				"order": 1,
+				"prevSize": 32,
+				"code": 58880,
+				"name": "user",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 116
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"showGlyphs": true,
+			"metrics": {
+				"emSize": 512,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880,
+			"showQuickUse": true,
+			"quickUsageToken": false,
+			"showMetrics": true,
+			"showMetadata": false
+		},
+		"imagePref": {
+			"color": 0,
+			"height": 32,
+			"columns": 16,
+			"margin": 16,
+			"png": false,
+			"sprites": true
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16,
+		"showLiga": false,
+		"showGrid": true,
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"search": ""
+	}
+}

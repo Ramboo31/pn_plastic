@@ -1,0 +1,67 @@
+/* dCodes Framework:(c) TemplateAccess */
+
+table {
+
+	font-family: TH Sarabun New;
+}
+td{
+	font-size:20px;
+}
+
+input{
+	font-size:20px;
+}
+.dc_table_s12{
+	background:#a3d49d;
+	border-collapse:collapse;
+	color:#333;
+	margin:0;
+	padding:0}
+	
+.dc_table_s12 a{
+	color:#03ae9b;
+	text-decoration:none}
+	
+.dc_table_s12 a:visited{color:#03ae9b}
+
+.dc_table_s12 a:hover{color:#77c9de}
+
+.dc_table_s12 caption{
+	font-size:1.6em;
+	padding-bottom:10px;
+	text-align:left;
+	text-transform:uppercase}
+	
+.dc_table_s12 thead th{
+	background:#3A4856;
+	color:#fff;
+	font-weight:normal;
+	padding:15px 10px;
+	text-align:left}
+	
+.dc_table_s12 tbody,.dc_table_s12 thead{
+	border-left:1px solid #a3d49d;
+	border-right:1px solid #a3d49d}
+	
+.dc_table_s12 tbody{
+	border-bottom:1px solid #EAECEE}
+	
+.dc_table_s12 tbody td,.dc_table_s12 tbody th{
+	background:url("../images/table_s12.gif") repeat-x;
+	padding:10px;
+	text-align:left}
+	
+.dc_table_s12 tbody tr{background:#F3F5F7}
+
+.dc_table_s12 tbody tr.odd{background:#F0F2F4}
+
+.dc_table_s12 tbody tr:hover{
+	background:#EAECEE;
+	color:#111}
+
+.dc_table_s12 tfoot td,.dc_table_s12 tfoot th,.dc_table_s12 tfoot tr{
+	background:#a3d49d;
+	font:1.2em;
+	padding:10px;
+	text-align:left;
+	text-transform:uppercase}
