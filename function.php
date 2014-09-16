@@ -119,6 +119,18 @@ $thai_date_return = " ".$thai_month_arr_full[date("n",$time)];
 return $thai_date_return;
 }
 
+function dropdownMonth($options)
+{
+	global $thai_month_arr_full;
+	$html = '<select class="btn btn-default dropdown-toggle" name="'.$options['name'].'" style="width: 58%; color: black;"  > <span class="caret"></span>';
+	$html .= '<option>เลือกเดือน</option>';
+	foreach ($thai_month_arr_full as $key => $value) {
+		if($key != "0") $html .= '<option value="'.$key.'">'.$value.'</option>';
+	}
+	$html .= "</select>";
+	return $html;
+}
+
 function Checktel($tel)
 {
 	if(strlen($tel) == 10)

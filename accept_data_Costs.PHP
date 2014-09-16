@@ -169,7 +169,9 @@ $today=strtotime($day);
 
 		<!--ชื่อลูค้า-->
 		<td> 
-			<input type="date"  value placeholder="ประจำเดือน" name="s_Cus_name" id="s_Cus_name" class="form-control validate[required,custom[onlyLetter],length[0,100]] text-input"> 
+			<?php 
+				$options['name'] = "s_month";
+				echo dropdownMonth($options);?>
 		</td>
 		<td>
 &nbsp;
