@@ -196,16 +196,16 @@ $today=strtotime($day);
 <?php
 
 $q_Cus_id=$_REQUEST['s_Cus_id'];
-$q_Cus_name=$_REQUEST['s_Cus_name'];
+$q_month=$_REQUEST['s_month'];
 
 if($q_Cus_id=="") $q_Cus_id="%" ;
-if($q_Cus_name=="") $q_Cus_name="%" ;
+if($q_month=="") $q_month="%" ;
 
 
 $sql="select * ";
 $sql=$sql."from costs ";
 $sql=$sql."where CS_COST like '%$q_Cus_id%'" ;
-$sql=$sql."and CS_ACT like '%$q_Cus_name%'";
+$sql=$sql."and CS_ACT like '%$q_month%'";
 $sql=$sql."order by CS_ID ";
 
 

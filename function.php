@@ -122,7 +122,7 @@ return $thai_date_return;
 function dropdownMonth($options)
 {
 	global $thai_month_arr_full;
-	$html = '<select class="btn btn-default dropdown-toggle" name="'.$options['name'].'" style="width: 58%; color: black;"  > <span class="caret"></span>';
+	$html = '<select class="btn btn-default dropdown-toggle" name="'.$options['name'].'" style=" color: black;"  > <span class="caret"></span>';
 	$html .= '<option>เลือกเดือน</option>';
 	foreach ($thai_month_arr_full as $key => $value) {
 		if($key != "0") $html .= '<option value="'.$key.'">'.$value.'</option>';

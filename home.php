@@ -78,13 +78,12 @@ $date=strtotime($str);
 
 ?>
 <tbody>
-	<tr> 
-		<td><div align="center"><a herf="" onClick="window.open('popup_home.php','','width=100,height=100'); return false;" data-toggle="modal" data-target=".bs-example-modal-sm"><?php echo $data['CusOr_ID']; ?> </a> </div></td>
+	<tr data-toggle="modal" data-target=".bs-example-modal-sm">
+		<td><div align="center"><?php echo $data['CusOr_ID']; ?>  </div></td>
 		<td><div align="center">&nbsp; <?php echo thai_date4($date);?>&nbsp;</div></td>
 		<td><div align="center">&nbsp;<?php echo $data['Pro_Name'];?>&nbsp;</div></td>
 		<td><div align="center">&nbsp;<?php echo $data['CusOr_amount'];?>&nbsp;</div></td>
 		<td><div align="center">&nbsp;<?php echo $data['CusOr_Status'];?>&nbsp;</div></td>
-
 	</tr>
 
 	<!-- Small modal 
@@ -111,6 +110,7 @@ $date=strtotime($str);
 						</div>
 						<div class="panel-body">
 							<?php  echo $data['Cus_Name']; ?>&nbsp;<?php  echo $data['Cus_lname']; ?>
+
 						</div>
 					</div>
 				</div>
