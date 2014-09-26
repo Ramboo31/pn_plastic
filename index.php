@@ -85,7 +85,7 @@
 
    
    <li style="float: right; ">
-    <a href="login.php" style="background: #BDC3C7;"><i class="fa fa-sign-out fa-lg"></i>&nbsp;Logout</li></a>
+    <a href="logout.php" style="background: #BDC3C7;"><i class="fa fa-sign-out fa-lg"></i>&nbsp;Logout</li></a>
 
    
 </ul>

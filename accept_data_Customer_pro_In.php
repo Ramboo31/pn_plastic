@@ -1,5 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<?php 
+session_start();
+include("connect/connect.php"); 
+include("function.php"); 
+
+if (!Checklogin())
+{
+	header("location: login_err.php"); //ทำหน้าเพื่อให้เข้าหน้า Login
+}
+?>
 <?php include("connect/connect.php"); ?>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >

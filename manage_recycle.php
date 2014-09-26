@@ -1,3 +1,13 @@
+<?php 
+session_start();
+include("connect/connect.php"); 
+include("function.php"); 
+
+if (!Checklogin())
+{
+	header("location: login_err.php"); //ทำหน้าเพื่อให้เข้าหน้า Login
+}
+?>
 <html manifest="cache.manifest">
 <head>
 
