@@ -1,15 +1,12 @@
-<?php 
-session_start();
+<html manifest="cache.manifest">
+<head>
+	<?php 
+
 include("connect/connect.php"); 
 include("function.php"); 
 
-if (!Checklogin())
-{
-	header("location: login_err.php"); //ทำหน้าเพื่อให้เข้าหน้า Login
-}
 ?>
-<html manifest="cache.manifest">
-<head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
 	<title>PN Plastic : Login</title> 
@@ -60,7 +57,7 @@ $sql=$sql."LEFT JOIN customer c ON ( co.Cus_ID = c.Cus_ID ) ";
 
 ?>
 
-<table class="dc_table_s12 cusorder" summary="Sample Table" >
+<table class="dc_table_s12" summary="Sample Table" >
 	<thead>
 		<tr>
 			<td><div align="center"><FONT COLOR=#fff> &nbsp;รหัสการทำงาน&nbsp;</FONT></div></td>
@@ -81,13 +78,12 @@ $date=strtotime($str);
 
 ?>
 <tbody>
-	<tr class="showdetail" cusid="<?php echo $data['CusOr_ID']; ?>">
+	<tr data-toggle="modal" data-target=".bs-example-modal-sm">
 		<td><div align="center"><?php echo $data['CusOr_ID']; ?>  </div></td>
 		<td><div align="center">&nbsp; <?php echo thai_date4($date);?>&nbsp;</div></td>
 		<td><div align="center">&nbsp;<?php echo $data['Pro_Name'];?>&nbsp;</div></td>
 		<td><div align="center">&nbsp;<?php echo $data['CusOr_amount'];?>&nbsp;</div></td>
 		<td><div align="center">&nbsp;<?php echo $data['CusOr_Status'];?>&nbsp;</div></td>
-		<td><div align="center"><a href="./show_home.php?CusOr_ID=<?php echo $data['CusOr_ID'];?>"></a></div></td>
 	</tr>
 
 	<!-- Small modal 
@@ -113,8 +109,7 @@ $date=strtotime($str);
 							<h3 class="panel-title">ข้อมูลการบด</h3>
 						</div>
 						<div class="panel-body">
-							 <div> <B>ชื่อ-นามสกุล</B> <span id="cusname" >  </span> </div> 
-							<div id="cusdate"></div>
+							<?php  echo $data['Cus_Name']; ?>&nbsp;<?php  echo $data['Cus_lname']; ?>
 
 						</div>
 					</div>
@@ -125,43 +120,24 @@ $date=strtotime($str);
 
 </center>
 
+		<!-- Load JS here for greater good =============================-->
 
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-select.js"></script>
+		<script src="js/bootstrap-switch.js"></script>
+		<script src="js/flatui-checkbox.js"></script>
+		<script src="js/flatui-radio.js"></script>
+		<script src="js/jquery.tagsinput.js"></script>
+		<script src="js/jquery.placeholder.js"></script>
+		<script src="js/jquery.stacktable.js"></script>
+		<script src="http://vjs.zencdn.net/4.3/video.js"></script>
+		<script src="js/application.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 	</div>
 </div>
-	<!-- Load JS here for greater good =============================-->
 
-	<script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-select.js"></script>
-	<script src="js/bootstrap-switch.js"></script>
-	<script src="js/flatui-checkbox.js"></script>
-	<script src="js/flatui-radio.js"></script>
-	<script src="js/jquery.tagsinput.js"></script>
-	<script src="js/jquery.placeholder.js"></script>
-	<script src="js/jquery.stacktable.js"></script>
-	<script src="http://vjs.zencdn.net/4.3/video.js"></script>
-	<script src="js/application.js"></script>
-	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-
-	<script type="text/javascript">
-		$( document ).ready(function() {
-			$(".cusorder .showdetail").click(function() {
-				var id = $(this).attr('cusid');
-				var url = "getcusorddetail.php?id=" + id;
-				//alert(url);
-				$.ajax({
-					url: url,
-					dataType: "json",
-					success: function(result) {
-						$(".modal #cusname").text(result.Cus_Name+' '+result.Cus_lname);
-						$(".modal #cusdate").text(result.CusOr_Date);
-						$('.modal').modal('show');
-					}
-				})
-			});
-		});
-	</script>
 </body>
 </html>

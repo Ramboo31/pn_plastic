@@ -1,4 +1,4 @@
 <?php 
 session_start();
-include "function.php";
+include "funtion.php";
 logout();

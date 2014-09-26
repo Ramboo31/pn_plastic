@@ -1,14 +1,4 @@
-<?php 
-session_start();
-include("connect/connect.php"); 
-include("function.php"); 
-
-if (!Checklogin())
-{
-	header("location: login_err.php"); //ทำหน้าเพื่อให้เข้าหน้า Login
-}
-?>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head> 
 <meta charset="UTF-8" />
 <title> Manage Customer </title>
@@ -134,8 +124,7 @@ $sql=$sql."order by Cus_ID ";
 	</thead>
 
 
-<?php 
-$record = mysql_query($sql);
+<?php $record = mysql_query($sql);
 while($data=mysql_fetch_assoc($record)){ ?>
 <tbody>
 	<tr> 
